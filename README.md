@@ -5,13 +5,13 @@ Passo-a-passo inicial:
 
 Crie uma vm na google cloud
 
-Copie o arquivo vmcfg.sh para a vm na cloud: gcloud scp vmcfg.sh :~/
-
-Entre na vm através do prompt de comando: gcloud beta compute ssh --zone "us-central1-a" "instance-1" --project "tokyo-hall-292412"
+Entre na vm através do prompt de comando: gcloud beta compute ssh --zone "us-central1-a" "instance-2" --project "tokyo-hall-292412"
 
 Crie o arquivo de configuração inicial da vm: nano vmcfg.sh
 
 Edite as configurações iniciais da vm: Copie o conteúdo do arquivo vmcfg.sh desse tutorial
+
+Execute o arquivo de configuração inicial: sh vmcfg.sh
 
 Adicione o grupo 'docker' ao seu usuário linux (para facilitar depois): sudo usermod -aG docker <seu-nome-de-usuário> (seu nome aparece no prompt)
 
