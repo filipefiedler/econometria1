@@ -46,4 +46,6 @@ Entrar no container: run_python3.sh (no home)
 
 Dentro do container, preencher tabela do postgres com o csv: python3 fill_db.py
 
+Executar o programa de forma interativa: python -m pdb
+
 
