@@ -19,4 +19,8 @@ Saia e entre na vm (precisa renovar o terminal p/ habilitar o grupo docker): exi
 
 Clone o repositório econometria1: git clone https://github.com/rbrandao22/econometria1.git
 
-Crie a imagem de container 'my-python-app' e rode o primeiro "hello world": cd econometria1 cd ops sh build.sh sh run.sh
+Crie a imagem de container 'my-python-app' e rode o primeiro "hello world": cd econometria1 cd ops sh build.sh
+
+Inicie o Python dentro do container: sh run_python3.sh
+
+Dentro do container, execute o arquivo exercicio1.py: python exercicio1.py
