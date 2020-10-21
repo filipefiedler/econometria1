@@ -24,3 +24,26 @@ Crie a imagem de container 'my-python-app' e rode o primeiro "hello world": cd e
 Inicie o Python dentro do container: sh run_python3.sh
 
 Dentro do container, execute o arquivo exercicio1.py: python exercicio1.py
+
+Sair do container: digite exit
+
+Instalar o postgres: cd econometria 1 cd database sh postgres_launch.sh
+
+Iniciar o postgres: sh psql_conn.sh with password=passwd
+
+Criar base de dados dentro do postgres: create database monitoria;
+
+Saia do posgres: \q
+
+Copiar csv para a base de dados:
+  sudo su - root
+  cd /mnt/postgresdb/pgdata
+  mkdir csv
+  cp /home/<your_user>/econometria1/database/maketable4.csv csv/
+  exit
+  
+Entrar no container: run_python3.sh (no home)
+
+Dentro do container, preencher tabela do postgres com o csv: python3 fill_db.py
+
+
