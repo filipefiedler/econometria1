@@ -1,1 +1,47 @@
-t
+# Configuração inicial
+
+Crie uma vm na google cloud
+
+Entre na vm através do prompt de comando: gcloud beta compute ssh --zone "us-central1-a" "instance-2" --project "tokyo-hall-292412"
+
+Crie o arquivo de configuração inicial da vm: nano vmcfg.sh
+
+Edite as configurações iniciais da vm: Copie o conteúdo do arquivo vmcfg.sh desse tutorial
+
+Execute o arquivo de configuração inicial: sh vmcfg.sh
+
+Adicione o grupo 'docker' ao seu usuário linux (para facilitar depois): sudo usermod -aG docker <seu-nome-de-usuário> (seu nome aparece no prompt)
+
+Saia e entre na vm (precisa renovar o terminal p/ habilitar o grupo docker): exit gcloud compute ssh
+
+Clone o repositório econometria1: git clone https://github.com/rbrandao22/econometria1.git
+
+Crie a imagem de container 'my-python-app' e rode o primeiro "hello world": cd econometria1 cd ops sh build.sh
+
+Inicie o Python dentro do container: sh run_python3.sh
+
+Dentro do container, execute o arquivo exercicio1.py: python exercicio1.py
+
+Sair do container: digite exit
+
+Instalar o postgres: cd econometria 1 cd database sh postgres_launch.sh
+
+Iniciar o postgres: sh psql_conn.sh with password=passwd
+
+Criar base de dados dentro do postgres: create database monitoria;
+
+Saia do posgres: \q
+
+Copiar csv para a base de dados:
+  sudo su - root
+  cd /mnt/postgresdb/pgdata
+  mkdir csv
+  cp /home/<your_user>/econometria1/database/maketable4.csv csv/
+  exit
+  
+Entrar no container: run_python3.sh (no home)
+
+Dentro do container, preencher tabela do postgres com o csv: python3 fill_db.py
+
+Executar o programa de forma interativa: python -m pdb
+
